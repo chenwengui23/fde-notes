@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 项目验收标准怎么写才不被扯皮？一份能直接抄的框架</title><meta name="description" content="把「效果要好」翻译成可测指标的四步方法，附验收单结构、判定算例和 12 种常见扯皮场景的预防写法。">
+<link rel="canonical" href="https://1e6bfcc8eab747e8aa3737874f040281.app.workbuddy.host/notes/ai-yanshou-biaozhun-zenme-xie.html">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1c2433;line-height:1.9}
+nav{position:sticky;top:0;background:#fff;border-bottom:1px solid #e3e9f2;padding:10px 16px;display:flex;gap:14px;align-items:center;z-index:10}
+nav b{color:#1d3a99}
+nav a{color:#3d4a63;text-decoration:none;font-size:13.5px}
+.wrap{max-width:760px;margin:0 auto;padding:34px 18px 60px}
+h1{font-size:25px;line-height:1.5;margin-bottom:14px}
+.meta{font-size:13px;color:#8a94a8;margin-bottom:26px}
+h2{font-size:18px;color:#1d3a99;margin:26px 0 10px}
+p{font-size:15.5px;margin-bottom:13px;color:#3a4559}
+a{color:#2456d6}
+.cta{background:#f4f7fd;border:1px solid #d7dfec;border-radius:14px;padding:20px 18px;margin-top:34px}
+.cta b{color:#1d3a99}
+.cta p{font-size:14px;margin:8px 0 0}
+footer{text-align:center;color:#98a2b3;font-size:12.5px;padding:24px 16px 40px}
+</style></head><body>
+<nav><b>无夜之境 · AI 落地</b><a href="https://1e6bfcc8eab747e8aa3737874f040281.app.workbuddy.host/notes/">全部文章</a><a href="https://1e6bfcc8eab747e8aa3737874f040281.app.workbuddy.host/read/" target="_blank">FDE 学习中心</a></nav>
+<div class="wrap"><h1>AI 项目验收标准怎么写才不被扯皮？一份能直接抄的框架</h1><div class="meta">原创 · AI 落地实战笔记 · 无夜之境</div>
+
+<p>AI 项目最大的纠纷源头，是合同里那句「效果要达到行业先进水平」。这句写法的下场几乎注定：上线后双方对「先进」的理解各执一词。验收标准要在签约前就写成可测、可判定的条款。</p>
+<h2>四步翻译法：从「效果好」到可签字</h2>
+<p>第一步，选指标族：问答类看准确率和拒答率，抽取类看字段级 F1，流程自动化看任务完成率和人工干预率。第二步，定数据集：用谁的数据、多少条、谁标注、争议样本谁裁决。第三步，定达标线：不是拍脑袋，从基线推导——现在的纯人工流程的错误率是 15%，目标砍到 5%，这就是达标线。第四步，定判定流程：跑几轮、不过怎么办、修复期多长。</p>
+<h2>一份验收单的最小结构</h2>
+<p>包含五栏：指标名、测试集与规模、达标线、实测值、是否通过。附件三样：测试集清单、标注规范、环境说明（用的哪个模型版本）。少了任何一样，扯皮时都拿不出证据。</p>
+<h2>最容易被忽略的三条保护性条款</h2>
+<p>一是「数据质量前提」：甲方提供的数据若不合格，验收期顺延——否则脏数据算你头上。二是「模型版本锁定」：模型供应商升级导致指标波动，责任如何分担。三是「修复期机制」：未达标给一次 2-4 周的修复期，而不是直接判死或无限拖延。</p>
+<p>这套框架的完整版——含 25 项交付物清单、6 周排期模板和 12 种扯皮场景——整理在<a href="https://1e6bfcc8eab747e8aa3737874f040281.app.workbuddy.host/" target="_blank">FDE 实战课的交付与验收模块</a>里，写合同前照着过一遍，能避开大部分坑。</p>
+
+<div class="cta"><b>想系统学 AI 落地？</b><p>《AI 落地工程师（FDE）实战课》：10 大模块 + 27 篇实战长文 + 实训营 + 案例库，<a href="https://1e6bfcc8eab747e8aa3737874f040281.app.workbuddy.host/read/" target="_blank">点此进入学习中心看全部目录</a>。更多 AI 落地干货，微信搜公众号「<b>无夜之境</b>」。</p></div>
+</div><footer>© 2026 无夜之境 · AI 落地实战笔记</footer></body></html>
