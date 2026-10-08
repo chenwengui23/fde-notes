@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>企业知识库问答做不好？90% 的坑出在数据接入前</title><meta name="description" content="RAG 知识库回答不准，先别怪模型。文档盘点、清洗、分块这三个前置环节决定了 80% 的效果上限。">
+<link rel="canonical" href="https://1e6bfcc8eab747e8aa3737874f040281.app.workbuddy.host/notes/rag-zhishiku-jianshe-biji.html">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1c2433;line-height:1.9}
+nav{position:sticky;top:0;background:#fff;border-bottom:1px solid #e3e9f2;padding:10px 16px;display:flex;gap:14px;align-items:center;z-index:10}
+nav b{color:#1d3a99}
+nav a{color:#3d4a63;text-decoration:none;font-size:13.5px}
+.wrap{max-width:760px;margin:0 auto;padding:34px 18px 60px}
+h1{font-size:25px;line-height:1.5;margin-bottom:14px}
+.meta{font-size:13px;color:#8a94a8;margin-bottom:26px}
+h2{font-size:18px;color:#1d3a99;margin:26px 0 10px}
+p{font-size:15.5px;margin-bottom:13px;color:#3a4559}
+a{color:#2456d6}
+.cta{background:#f4f7fd;border:1px solid #d7dfec;border-radius:14px;padding:20px 18px;margin-top:34px}
+.cta b{color:#1d3a99}
+.cta p{font-size:14px;margin:8px 0 0}
+footer{text-align:center;color:#98a2b3;font-size:12.5px;padding:24px 16px 40px}
+</style></head><body>
+<nav><b>无夜之境 · AI 落地</b><a href="https://1e6bfcc8eab747e8aa3737874f040281.app.workbuddy.host/notes/">全部文章</a><a href="https://1e6bfcc8eab747e8aa3737874f040281.app.workbuddy.host/read/" target="_blank">FDE 学习中心</a></nav>
+<div class="wrap"><h1>企业知识库问答做不好？90% 的坑出在数据接入前</h1><div class="meta">原创 · AI 落地实战笔记 · 无夜之境</div>
+
+<p>企业知识库问答（RAG）是 AI 落地里最普遍的项目，也是最容易被低估的项目。多数团队一上来就调模型、换框架，结果发现回答还是不准。真相是：效果上限在数据接入前就决定了。</p>
+<h2>第一坑：没做文档盘点</h2>
+<p>先问三个问题：公司有哪些文档？哪些是最新版？哪些根本不能给员工看？一份盘点表（文档名、版本、负责人、敏感级）能省掉后面一半的返工。散落在个人电脑里的文档，等于不存在。</p>
+<h2>第二坑：直接把 PDF 切了入库</h2>
+<p>扫描件、表格、带页眉页脚的合同，直接切块入库就是灾难。扫描件要先 OCR，表格要按行转文本，合同要按条款切分。文档类型不同，处理管线就不同——这是知识库项目里最花工时的部分。</p>
+<h2>第三坑：分块大小拍脑袋</h2>
+<p>固定 500 字一刀切，会把一个完整条款切成两半，检索回来的都是半句话。按标题层级分块、父子块策略，通常比固定长度稳得多。切完先人工抽查二十条，再谈调参。</p>
+<h2>第四坑：没有评测集</h2>
+<p>「感觉变准了」不是结论。上线前准备 30-50 个真实业务问题（含应拒答的越权问题），每次改动跑一遍算分，效果才有基准。</p>
+<h2>前置工作做扎实，模型是最后才换的</h2>
+<p>一个实用的顺序：文档盘点 → 清洗入库 → 分块抽查 → 评测集 → 再选模型。这套流程、连同每一环的工时估算和常见故障，在<a href="https://1e6bfcc8eab747e8aa3737874f040281.app.workbuddy.host/read/" target="_blank">FDE 学习中心的课程模块里有逐节展开</a>（目录免费可看）。做企业知识库项目之前，值得把整条管线过一遍。</p>
+
+<div class="cta"><b>想系统学 AI 落地？</b><p>《AI 落地工程师（FDE）实战课》：10 大模块 + 27 篇实战长文 + 实训营 + 案例库，<a href="https://1e6bfcc8eab747e8aa3737874f040281.app.workbuddy.host/read/" target="_blank">点此进入学习中心看全部目录</a>。更多 AI 落地干货，微信搜公众号「<b>无夜之境</b>」。</p></div>
+</div><footer>© 2026 无夜之境 · AI 落地实战笔记</footer></body></html>
