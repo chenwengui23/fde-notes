@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>给老板看的 AI 选型说明：模型、向量库、部署方式怎么定</title><meta name="description" content="写给非技术决策者的一页纸选型逻辑：闭源 API、开源自建、本地部署的边界，以及向量库选型的三个判断依据。">
+<link rel="canonical" href="https://1e6bfcc8eab747e8aa3737874f040281.app.workbuddy.host/notes/dagv-moxing-xuanxing-duibifenxi.html">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1c2433;line-height:1.9}
+nav{position:sticky;top:0;background:#fff;border-bottom:1px solid #e3e9f2;padding:10px 16px;display:flex;gap:14px;align-items:center;z-index:10}
+nav b{color:#1d3a99}
+nav a{color:#3d4a63;text-decoration:none;font-size:13.5px}
+.wrap{max-width:760px;margin:0 auto;padding:34px 18px 60px}
+h1{font-size:25px;line-height:1.5;margin-bottom:14px}
+.meta{font-size:13px;color:#8a94a8;margin-bottom:26px}
+h2{font-size:18px;color:#1d3a99;margin:26px 0 10px}
+p{font-size:15.5px;margin-bottom:13px;color:#3a4559}
+a{color:#2456d6}
+.cta{background:#f4f7fd;border:1px solid #d7dfec;border-radius:14px;padding:20px 18px;margin-top:34px}
+.cta b{color:#1d3a99}
+.cta p{font-size:14px;margin:8px 0 0}
+footer{text-align:center;color:#98a2b3;font-size:12.5px;padding:24px 16px 40px}
+</style></head><body>
+<nav><b>无夜之境 · AI 落地</b><a href="https://1e6bfcc8eab747e8aa3737874f040281.app.workbuddy.host/notes/">全部文章</a><a href="https://1e6bfcc8eab747e8aa3737874f040281.app.workbuddy.host/read/" target="_blank">FDE 学习中心</a></nav>
+<div class="wrap"><h1>给老板看的 AI 选型说明：模型、向量库、部署方式怎么定</h1><div class="meta">原创 · AI 落地实战笔记 · 无夜之境</div>
+
+<p>技术团队给老板的选型报告经常写满参数和跑分，老板看完只记住了贵的和便宜的。这篇用三个问题把选型逻辑讲清，可以直接当成一页纸说明的骨架。</p>
+<h2>问题一：数据能不能出去？</h2>
+<p>这是第一分叉点。数据涉及客户隐私、生产工艺、财务数据且合同禁止外传 → 只能本地部署或私有化 API，成本上一个台阶。数据不敏感 → 闭源 API（性价比和效果最好）几乎是默认答案。中间态：数据脱敏后可用 API，或混合路由。</p>
+<h2>问题二：效果差距值多少钱？</h2>
+<p>闭源顶级模型和开源模型在通用任务上差距不大，但在你的垂直场景里差距可能被放大。正确做法：先花两三千块 API 费用做一周的对比测试（用你自己的 30 个真实问题），用数据决定，而不是用跑分决定。</p>
+<h2>问题三：并发和成本的天花板在哪？</h2>
+<p>日调用量万次以下，API 按量付费几乎总是更便宜；日均百万次以上，自建才有成本优势。中间地带算细账：token 单价 × 日均量 × 30 天，对比 GPU 服务器月成本。</p>
+<h2>向量库：别纠结，先满足三点</h2>
+<p>数据量千万条以下，选哪个向量库对效果的影响远小于分块策略。判断依据就三条：运维能力（有没有人会运维）、数据规模、预算。小项目直接用轻量方案起步，迁移成本远比想象低。</p>
+<p>这套「一页纸选型说明」的完整版（含 10 条选型路线对照和 8 维打分表）在<a href="https://1e6bfcc8eab747e8aa3737874f040281.app.workbuddy.host/" target="_blank">FDE 实战课的技术选型模块</a>，可以直接改写成给领导看的报告。</p>
+
+<div class="cta"><b>想系统学 AI 落地？</b><p>《AI 落地工程师（FDE）实战课》：10 大模块 + 27 篇实战长文 + 实训营 + 案例库，<a href="https://1e6bfcc8eab747e8aa3737874f040281.app.workbuddy.host/read/" target="_blank">点此进入学习中心看全部目录</a>。更多 AI 落地干货，微信搜公众号「<b>无夜之境</b>」。</p></div>
+</div><footer>© 2026 无夜之境 · AI 落地实战笔记</footer></body></html>
